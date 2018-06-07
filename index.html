@@ -3,11 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Pruebas y Test curso AngularJS</title>
+
+	<link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
 	<script src="controller.js"></script>
 </head>
 <body ng-controller="nombreControlador">
-	<input type="text" ng-model="frase">
-	{{"Hi world"+ frase}}
+	
+	<center>
+		
+		<h1>{{frase}}</h1> <br>
+
+		<label for="">Comentario</label><br>
+		<input type="text" width="100" ng-model="nuevoComentario.comentario"><br>
+		<label for="">Usuario</label><br>
+		<input type="text" ng-model="nuevoComentario.usuario"><br><br>
+		<button type="button" class="btn btn-primary" ng-click="agregarComentario()">Agregar</button><br><br>
+		
+
+		<h3>Comentarios</h3>
+			<h5 ng-repeat="comentario in comentarios">
+				{{comentario.comentario}} - <b> {{ comentario.usuario }} </b>
+			</h5>
+
+	</center>
+
+
 </body>
 </html>
