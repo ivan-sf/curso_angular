@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="App-Local-Storage">
+<head>
+	<meta charset="UTF-8">
+	<title>Pruebas y Test curso AngularJS</title>
+
+	<link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+
+	<script src="controller.js"></script>
+	<script src="angular-local-storage.min.js"></script>
+</head>
+<body ng-controller="localStorage">
+	
+	<center>
+		
+		<h1>{{titulo}}</h1> <br>
+
+		
+
+		<h3>{{ subtitulo }}</h3>
+
+		<div class="card text-white bg-dark mb-3" style="max-width: 60rem;" ng-repeat="tarea in tareas">
+	        <div class="card-header">Calvin</div>
+	        <div class="card-body">
+	          <h4 class="card-title">{{tarea.comentario}}</h4>
+	          <p class="card-text"><b> {{ tarea.usuario }}.</p>
+	        </div>
+	    </div>
+
+	    <form ng-submit="agregarTarea()">
+	    	<label for="">Comentario</label><br>
+			<textarea id="input" type="text" ng-model="nuevaTarea.comentario"></textarea> <br>
+
+			<label for="">Usuario</label><br>
+			<input  id="input" type="text" ng-model="nuevaTarea.usuario"> <br><br>
+
+			<input  class="btn btn-success" type="submit" value="Comentar">
+			<input  class="btn btn-danger" type="button" ng-click="limpiar()" value="Limpiar">
+	    </form>
+
+		
+
+			
+
+	</center>
+
+
+</body>
+</html>
+
