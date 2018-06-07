@@ -23,9 +23,15 @@
 		
 
 		<h3>Comentarios</h3>
-			<h5 ng-repeat="comentario in comentarios">
-				{{comentario.comentario}} - <b> {{ comentario.usuario }} </b>
-			</h5>
+
+		<div class="bs-component" ng-repeat="comentario in comentarios">
+              <div class="alert alert-dismissible alert-primary">
+                {{comentario.comentario}} - <b> {{ comentario.usuario }} </b>
+              </div>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+        </div>
+
+			
 
 	</center>
 
