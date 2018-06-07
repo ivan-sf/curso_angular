@@ -9,6 +9,13 @@
 		var app = angular.module("App-watch", [])
 		app.controller("watch",["$scope","$http", function($scope,$http){
 		 $scope.titulo = "Calvin IDSF";
+
+		 setTimeout(function () {
+		 	$scope.$apply(function () {
+		 		$scope.titulo = "Calvin";	
+		 	})
+		 	console.log($scope.titulo);
+		 },2000);
 		}]);﻿
 	</script>
 </head>
