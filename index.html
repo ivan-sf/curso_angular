@@ -13,23 +13,26 @@
 	
 	<center>
 		
-		<h1>{{frase}}</h1> <br>
-
+		<h1>{{titulo}}</h1> <br>
+<!--
 		<label for="">Comentario</label><br>
 		<input type="text" width="100" ng-model="nuevoComentario.comentario"><br>
 		<label for="">Usuario</label><br>
 		<input type="text" ng-model="nuevoComentario.usuario"><br><br>
 		<button type="button" class="btn btn-primary" ng-click="agregarComentario()">Agregar</button><br><br>
 		
+-->
+		<h3>{{ subtitulo }}</h3>
 
-		<h3>Comentarios</h3>
+		<div class="card text-white bg-dark mb-3" style="max-width: 60rem;" ng-repeat="post in posts">
+	        <div class="card-header">Calvin</div>
+	        <div class="card-body">
+	          <h4 class="card-title">{{post.title}}</h4>
+	          <p class="card-text"><b> {{ post.body }}.</p>
+	        </div>
+	    </div>
 
-		<div class="bs-component" ng-repeat="comentario in comentarios">
-              <div class="alert alert-dismissible alert-primary">
-                {{comentario.comentario}} - <b> {{ comentario.usuario }} </b>
-              </div>
-            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
-        </div>
+		
 
 			
 
